@@ -30,6 +30,8 @@ const Login = () => {
 const [userValidation ,setUserValidation]= useState(false)
 const [PasswordValidation ,setPasswordValidation]= useState(false)
 const [serverUrlValidation ,setServerURLValidation]= useState(false)
+const loginUser = useSelector((state ) => state.loginUserDetails.loginUser);  
+
 
   const handleUserDetails=(e)=>{
     setUserDetails({
@@ -42,8 +44,8 @@ const [serverUrlValidation ,setServerURLValidation]= useState(false)
   const handelLogin=()=>{
     checkValidation();
     LoginUserDetails(dispatch,userDetails);
-    if(userDetails.userName === "Aditi" && userDetails.password === "aditi@123"){
-    navigate("view/Collection");
+    if(loginUser){
+    navigate("/view/Collection");
   }
    
   }

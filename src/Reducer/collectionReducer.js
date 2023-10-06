@@ -2,7 +2,7 @@
 import { CollectionList } from '../constraint/login_Type';
 
 const intialState = {
-    collections: { },
+    collections: [],
      };
      
 export const collectionReducer =(state =intialState,{ type, payload })=>{
