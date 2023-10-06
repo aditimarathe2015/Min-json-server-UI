@@ -2,7 +2,7 @@
 import { LoginTypes } from '../constraint/login_Type';
 
 const intialState = {
-    loginUser: { },
+    loginUser: false,
      };
      
 export const LoginReducer =(state =intialState,{ type, payload })=>{

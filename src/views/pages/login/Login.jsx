@@ -23,7 +23,7 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [userDetails, setUserDetails] = useState({
-    userName :0,
+    userName :'',
     password:'',
     serverURL:''
   });
@@ -32,7 +32,7 @@ const [PasswordValidation ,setPasswordValidation]= useState(false)
 const [serverUrlValidation ,setServerURLValidation]= useState(false)
 const loginUser = useSelector((state ) => state.loginUserDetails.loginUser);  
 
-
+console.log(loginUser)
   const handleUserDetails=(e)=>{
     setUserDetails({
       ...userDetails,
@@ -51,19 +51,19 @@ const loginUser = useSelector((state ) => state.loginUserDetails.loginUser);
   }
 
   const checkValidation =()=>{
-    if(!userDetails.userName){
+    if(userDetails.userName ===""){
       setUserValidation(true)
     }
     else{
       setUserValidation(false)
     }
-    if(!userDetails.password){
+    if(userDetails.password === ""){
       setPasswordValidation(true)
     }
     else{
       setPasswordValidation(false)
     }
-    if(!userDetails.serverURL){
+    if( userDetails.serverURL === ""){
       setServerURLValidation(true)
     }
     else{
