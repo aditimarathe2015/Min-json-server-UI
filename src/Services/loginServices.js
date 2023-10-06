@@ -14,7 +14,7 @@ export const LoginUserDetails=(dispatch,user) => {
         payload
      })
      .then(res => {
-       dispatch(LoginUser(res.data));
+       dispatch(LoginUser(res.data,user.serverURL));
        })
      .catch((err) => {
       // dispatch(returnErrors(err.response.data, err.response.status));

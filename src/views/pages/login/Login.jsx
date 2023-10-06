@@ -44,7 +44,7 @@ console.log(loginUser)
   const handelLogin=()=>{
     checkValidation();
     LoginUserDetails(dispatch,userDetails);
-    if(loginUser){
+    if(!loginUser){
     navigate("/view/Collection");
   }
    

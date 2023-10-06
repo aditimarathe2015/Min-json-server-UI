@@ -3,6 +3,7 @@ import {collectionList} from "../Action/collectionAction"
 
  
 export const getCollections=(dispatch,serverURL) => { 
+  serverURL= 'http://localhost:3000'
     axios
      .get(serverURL)
      .then(res => {
